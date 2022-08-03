@@ -1,0 +1,112 @@
+/* Resetting the default browser styles. */
+*,
+*::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+@import "partials/colors";
+@import "partials/typography";
+@import "partials/animations";
+
+body {
+    font-family: $font-family-body;
+
+    cursor: default;
+    user-select: none;
+}
+
+.page {
+    max-width: 38.4rem;
+
+    margin: 0 auto;
+
+    padding: 0 1rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    background: $bg-header;
+
+    h1 {
+        font-family: $font-family-header;
+        font-size: $font-size-header;
+        font-weight: $font-weight-pattern;
+
+        text-transform: uppercase;
+
+        color: $color-title;
+    }
+
+    .title {
+        width: 100%;
+
+        text-align: center;
+
+        background: $bg-emphasis;
+
+        margin: 3.2rem 0;
+    }
+
+    img {
+        padding: 1rem 0;
+    }
+}
+
+main {
+    max-width: 32rem;
+    margin: 2rem auto;
+
+    .wrapper {
+        display: grid;
+        gap: 3.2rem;
+    }
+
+    p {
+        font-size: $font-size-body;
+        font-weight: $font-weight-pattern;
+        font-style: normal;
+
+        line-height: 2.5rem;
+
+        color: $color-emphasis-dark;
+
+        // margin-top: 2rem;
+
+        text-align: center;
+    }
+
+    .card {
+        position: relative;
+
+        h2 {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+
+            padding: 0.5rem 2rem;
+
+            font-size: $font-size-body;
+            text-transform: uppercase;
+
+            width: fit-content;
+
+            background: $bg-emphasis-clean;
+
+            border-radius: 2rem;
+        }
+
+        img {
+            border-radius: 0.6rem;
+        }
+    }
+}
+
+@import "partials/layout";
