@@ -10,13 +10,14 @@
 
 @import "partials/colors";
 @import "partials/typography";
-@import "partials/animations";
 
 body {
     font-family: $font-family-body;
 
     cursor: default;
     user-select: none;
+
+    background: $bg-body;
 }
 
 .page {
@@ -30,6 +31,8 @@ body {
 header {
     display: flex;
     flex-direction: column;
+
+    gap: 2rem;
 
     align-items: center;
 
@@ -58,16 +61,6 @@ header {
     img {
         padding: 1rem 0;
     }
-}
-
-main {
-    max-width: 32rem;
-    margin: 2rem auto;
-
-    .wrapper {
-        display: grid;
-        gap: 3.2rem;
-    }
 
     p {
         font-size: $font-size-body;
@@ -78,9 +71,19 @@ main {
 
         color: $color-emphasis-dark;
 
-        // margin-top: 2rem;
-
         text-align: center;
+
+        background: $bg-body;
+    }
+}
+
+main {
+    max-width: 32rem;
+    margin: 2rem auto;
+
+    .wrapper {
+        display: grid;
+        gap: 3.2rem;
     }
 
     .card {
@@ -105,6 +108,10 @@ main {
 
         img {
             border-radius: 0.6rem;
+
+            width: 100%;
+
+            object-fit: fill;
         }
     }
 }
