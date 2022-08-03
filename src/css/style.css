@@ -16,6 +16,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background: #eff1ff;
 }
 
 .page {
@@ -32,6 +33,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 2rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -57,6 +59,16 @@ header img {
   padding: 1rem 0;
 }
 
+header p {
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2.5rem;
+  color: #23053a;
+  text-align: center;
+  background: #eff1ff;
+}
+
 main {
   max-width: 32rem;
   margin: 2rem auto;
@@ -66,15 +78,6 @@ main .wrapper {
   display: -ms-grid;
   display: grid;
   gap: 3.2rem;
-}
-
-main p {
-  font-size: 2rem;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 2.5rem;
-  color: #23053a;
-  text-align: center;
 }
 
 main .card {
@@ -97,5 +100,76 @@ main .card h2 {
 
 main .card img {
   border-radius: 0.6rem;
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+@media (min-width: 900px) {
+  .page {
+    max-width: 170rem;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "A B";
+    gap: 2rem;
+  }
+  .page header {
+    max-width: 37.7rem;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: A;
+  }
+  .page p {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: A;
+    color: #eff1ff;
+    max-width: 27.5rem;
+    background: none;
+  }
+  .page main {
+    max-width: 90.3rem;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: B;
+  }
+  .page main .wrapper {
+        grid-template-areas: "A B C" "D B E" "D F E";
+  }
+  .page main .wrapper .card:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: A;
+  }
+  .page main .wrapper .card:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: B;
+    width: 100%;
+  }
+  .page main .wrapper .card:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: C;
+  }
+  .page main .wrapper .card:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: D;
+  }
+  .page main .wrapper .card:nth-child(5) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: F;
+  }
+  .page main .wrapper .card:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    grid-area: E;
+  }
 }
 /*# sourceMappingURL=style.css.map */
