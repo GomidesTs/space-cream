@@ -1,0 +1,64 @@
+@media (min-width: 900px) {
+    .page {
+        max-width: 170rem;
+
+        display: grid;
+        grid-template-areas: "A B";
+
+        gap: 2rem;
+
+        header {
+            max-width: 37.7rem;
+
+            grid-area: A;
+        }
+
+        p {
+            grid-area: A;
+
+            color: $bg-body;
+
+            max-width: 27.5rem;
+
+            background: none;
+        }
+
+        main {
+            max-width: 90.3rem;
+
+            grid-area: B;
+
+            .wrapper {
+                grid-template-areas:
+                    "A B C"
+                    "D B E"
+                    "D F E";
+
+                .card:nth-child(1) {
+                    grid-area: A;
+                }
+
+                .card:nth-child(2) {
+                    grid-area: B;
+                    width: 100%;
+                }
+
+                .card:nth-child(3) {
+                    grid-area: C;
+                }
+
+                .card:nth-child(4) {
+                    grid-area: D;
+                }
+
+                .card:nth-child(5) {
+                    grid-area: F;
+                }
+
+                .card:nth-child(6) {
+                    grid-area: E;
+                }
+            }
+        }
+    }
+}
